@@ -20,3 +20,7 @@
     
 //     buildName(myObject);
 
+interface Square {
+    length: number;
+    color?: string;
+}
