@@ -3,13 +3,17 @@
 //     name: string;
 //     prettyPrint(): void;
 // }
-function useSquare(mySquare) {
-    let message = "The ";
-    if (mySquare.color) {
-        message += `${mySquare.color} `;
+let myCar = {
+    make: 'Honda',
+    model: 'Civic',
+    numDoors: 4,
+    seatingCapacity: 5,
+    gasMileage: 20,
+    getCarType: function () {
+        return `${this.make} ${this.model}`;
     }
-    message += `square has a perimeter of ${mySquare.length * 4}`;
-    return message;
+};
+function buildCar(car) {
+    console.log(`Building a ${car.getCarType()}`);
 }
-console.log(useSquare({ length: 3, color: 'red' }));
-console.log(useSquare({ length: 5 }));
+buildCar(myCar);
