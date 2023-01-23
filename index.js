@@ -1,14 +1,15 @@
 "use strict";
-function namePrint(givenObject) {
-    console.log(givenObject.name);
-}
-let myObject = {
-    name: "Elmo", address: "123 Sesame St.",
-    prettyPrint: function () {
-        console.log(`Name: ${this.name}`);
+// interface nameInterface {
+//     name: string;
+//     prettyPrint(): void;
+// }
+function useSquare(mySquare) {
+    let message = "The ";
+    if (mySquare.color) {
+        message += `${mySquare.color} `;
     }
-};
-function buildName(givenObject) {
-    givenObject.prettyPrint();
+    message += `square has a perimeter of ${mySquare.length * 4}`;
+    return message;
 }
-buildName(myObject);
+console.log(useSquare({ length: 3, color: 'red' }));
+console.log(useSquare({ length: 5 }));
