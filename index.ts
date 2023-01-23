@@ -39,3 +39,14 @@
 
 // console.log(useSquare({ length: 3, color: 'red' }));
 // console.log(useSquare({ length: 5 }));
+
+interface CarInterface {
+    make: string;
+    model: string;
+    numDoors: number;
+    seatingCapacity: number;
+    chargeCapacity?: number;
+
+    getCarType(): string;
+    getChargeLevel?(): number;
+}
