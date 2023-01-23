@@ -51,7 +51,7 @@ interface CarInterface {
     getChargeLevel?(): number;
 }
 
-let myCar: CarInterface = {
+let myCar = {
     make: 'Honda',
     model: 'Civic',
     numDoors: 4,
@@ -62,3 +62,9 @@ let myCar: CarInterface = {
         return `${this.make} ${this.model}`;
     }
 };
+
+function buildCar(car: CarInterface): void {
+    console.log(`Building a ${car.getCarType()}`);
+}
+
+buildCar(myCar);
