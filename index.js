@@ -8,4 +8,7 @@ let myObject = {
         console.log(`Name: ${this.name}`);
     }
 };
-namePrint(myObject);
+function buildName(givenObject) {
+    givenObject.prettyPrint();
+}
+buildName(myObject);
