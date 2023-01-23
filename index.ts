@@ -1,4 +1,8 @@
-function namePrint(givenObject: { name: string }){
+interface nameInterface {
+    name: string;
+}
+
+function namePrint(givenObject: nameInterface){
     console.log(givenObject.name);
 }
 
