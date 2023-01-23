@@ -50,3 +50,15 @@ interface CarInterface {
     getCarType(): string;
     getChargeLevel?(): number;
 }
+
+let myCar: CarInterface = {
+    make: 'Honda',
+    model: 'Civic',
+    numDoors: 4,
+    seatingCapacity: 5,
+    gasMileage: 20,
+
+    getCarType: function () {
+        return `${this.make} ${this.model}`;
+    }
+};
