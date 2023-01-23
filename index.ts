@@ -1,5 +1,6 @@
 interface nameInterface {
     name: string;
+    prettyPrint(): void;
 }
 
 function namePrint(givenObject: nameInterface){
@@ -12,4 +13,9 @@ let myObject = {
         console.log(`Name: ${this.name}`);
     }
     };
-namePrint(myObject);
+
+    function buildName(givenObject: nameInterface) {
+        givenObject.prettyPrint();
+    }
+    
+    buildName(myObject);
